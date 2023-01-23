@@ -12,14 +12,14 @@ int (*check_format_specifier(const char *format))(va_list);
 /**
   * struct function - containes character and function pointer
   * @tmp: character pointer which points to valid format specifier
-  * @f: function pointer which points format specifier function 
+  * @f: function pointer which points format specifier function
   */
 
 typedef struct function
 {
 	char *tmp;
 	int (*f)(va_list);
-}ftype;
+} ftype;
 int print_char(va_list);
 int print_str(va_list);
 int print_percent(va_list);
