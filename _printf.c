@@ -7,6 +7,7 @@
  * Return: On success, the total number of characters written
  * If error occurs, a negative number is returned
  */
+
 int _printf(const char *format, ...)
 {
 	int i = 0, count = 0, value = 0;
@@ -21,8 +22,7 @@ int _printf(const char *format, ...)
 		if (format[i] != '%')
 		{
 			value = _putchar(format[i]);
-			count += value;
-			i++;
+			count += value, i++;
 			continue;
 		}
 		if (format[i] == '%')
@@ -31,19 +31,20 @@ int _printf(const char *format, ...)
 			if (f != NULL)
 			{
 				value = f(args);
-				count += value;
-				i = i + 2;
+				count += value, i = i + 2;
 				continue;
 			}
-			if (format[i + 1] == '\0')
+			if (f == NULL)
 			{
-				break;
+				_putchar(format[i]);
+				count++;
 			}
+			if (format[i + 1] == '\0')
+				break;
 			if (format[i + 1] != '\0')
 			{
 				value = _putchar(format[i + 1]);
-				count += value;
-				i = i + 2;
+				count += value, i = i + 2;
 				continue;
 			}
 		}
