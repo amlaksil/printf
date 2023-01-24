@@ -12,6 +12,8 @@ int (*check_format_specifier(const char *format))(va_list)
 	ftype form_array[] = {{"c", print_char},
 			      {"s", print_str},
 			      {"%", print_percent},
+			      {"i", print_int},
+			      {"d", print_int},
 			      {NULL, NULL}};
 
 	while (form_array[i].tmp != NULL)
