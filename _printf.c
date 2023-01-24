@@ -31,12 +31,11 @@ int _printf(const char *format, ...)
 			if (f != NULL)
 			{
 				value = f(args);
-				count += value, i = i + 2, continue;
+				count += value, i = i + 2;
+				continue;
 			}
 			if (f == NULL)
-			{
 				_putchar(format[i]), count++;
-			}
 			if (format[i + 1] == '\0')
 				break;
 			if (format[i + 1] != '\0')
