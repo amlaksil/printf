@@ -1,4 +1,6 @@
 #include "main.h"
+void print_i(int);
+int intlen(int);
 /**
  * print_i - prints a number using putchar
  * @n: the number to be printed
@@ -37,7 +39,7 @@ int print_int(va_list args)
  */
 int intlen(int n)
 {
-	unsigned int count, i = 0, num = n;
+	unsigned int i = 0, num = n;
 
 	if (n < 0)
 	{
