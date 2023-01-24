@@ -28,7 +28,11 @@ void print_i(int n)
 int print_int(va_list args)
 {
 	int n = va_arg(args, int);
-
+	if (n == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	print_i(n);
 	return (intlen(n));
 }
