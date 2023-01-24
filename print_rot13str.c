@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * rot13 - it encodes the given string by using key = 13
- * @a: the address of string to be encoded
+ * @a: the address  of string to be encoded
  * Return: the encoded string
  */
 void rot13(char *a)
