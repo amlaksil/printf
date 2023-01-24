@@ -20,14 +20,10 @@ void print_ui(unsigned int n)
  */
 int print_uint(va_list args)
 {
-	unsigned long int num;
+	unsigned int num;
 	unsigned int n;
-	num = va_arg(args,long int);
-	if (num > 4294967296)
-	{
-		return (0);
-	}
-	n = (unsigned int) num;
+	num = va_arg(args,unsigned int);
+	n = num;
 	if (n == 0)
 	{
 		_putchar('0');
