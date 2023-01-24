@@ -15,6 +15,10 @@ int (*check_format_specifier(const char *format))(va_list)
 			      {"i", print_int},
 			      {"d", print_int},
 			      {"b", print_binary},
+			      {"u", print_uint},
+			      {"o", print_octal},
+			      {"x", print_hexadecimal},
+			      {"X", print_hexadecimal},
 			      {NULL, NULL}};
 
 	while (form_array[i].tmp != NULL)
