@@ -20,8 +20,16 @@ void print_ui(unsigned int n)
  */
 int print_uint(va_list args)
 {
-	unsigned int n;
-	n = va_arg(args,int);
+	long int num;
+	int n;
+	num = va_arg(args,long int);
+	printf("[%lu]",num);
+	if (num > 4294967296)
+	{
+		printf("Yes");
+		return (0);
+	}
+	n = (unsigned int) num;
 	if (n == 0)
 	{
 		_putchar('0');
