@@ -20,7 +20,7 @@ void print_ui(unsigned int n)
  */
 int print_uint(va_list args)
 {
-	long int num;
+	unsigned long int num;
 	int n;
 	num = va_arg(args,long int);
 	printf("[%lu]",num);
