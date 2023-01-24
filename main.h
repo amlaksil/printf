@@ -30,4 +30,6 @@ int print_octal(va_list);
 int print_hexadecimal(va_list);
 int print_str2(va_list);
 int print_pointer(va_list);
+int print_revstr(va_list);
+int print_rot13str(va_list);
 #endif

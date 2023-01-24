@@ -25,7 +25,7 @@ int print_uint(va_list args)
 	unsigned int num;
 	unsigned int n;
 
-	num = va_arg(args, unsigned int);
+	num = (unsigned int) va_arg(args, unsigned int);
 	n = num;
 	if (n == 0)
 	{
