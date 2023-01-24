@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * print_octal - it prints given interger to octal
- * @n: the number to be converted and printed
+ * print_hexadecimal - it prints given interger to octal
+ * @args: the number to be converted and printed
  * Return: the amount of character printed in side this function
  */
 int print_hexadecimal(va_list args)
@@ -10,6 +10,7 @@ int print_hexadecimal(va_list args)
 	int i, j;
 	char a[16] = "0123456789abcdef";
 	char str[9];
+
 	n = va_arg(args, int);
 	num = n;
 

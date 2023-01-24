@@ -1,16 +1,17 @@
 #include "main.h"
 /**
  * print_octal - it prints given interger to octal
- * @n: the number to be converted and printed
+ * @args: the number to be converted and printed
  * Return: the amount of character printed in side this function
  */
 int print_octal(va_list args)
 {
-	unsigned int num ,n;
+	unsigned int num, n;
 	int i, j;
 	char a[8] = "01234567";
-	char str[12];
-	n = va_arg(args,int);
+	char str[24];
+
+	n = va_arg(args, int);
 	num = n;
 
 	if (n == 0)

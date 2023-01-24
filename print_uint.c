@@ -3,12 +3,13 @@
 void print_ui(unsigned int);
 int uintlen(unsigned int);
 /**
- * print_uint - prints a number using putchar
+ * print_ui - prints a number using putchar
  * @n: the number to be printed
  */
 void print_ui(unsigned int n)
 {
 	unsigned int num = n;
+
 	if ((num / 10) > 0)
 		print_ui(num / 10);
 
@@ -16,13 +17,15 @@ void print_ui(unsigned int n)
 }
 /**
  * print_uint - prints a number using putchar
- * @n: the number to be printed
+ * @args: the number to be printed
+ * Return: the word count
  */
 int print_uint(va_list args)
 {
 	unsigned int num;
 	unsigned int n;
-	num = va_arg(args,unsigned int);
+
+	num = va_arg(args, unsigned int);
 	n = num;
 	if (n == 0)
 	{
@@ -42,9 +45,9 @@ int uintlen(unsigned int n)
 {
 	unsigned int i = 0, num = n;
 
-	for (;(num) > 0;i++)
+	for (; (num) > 0; i++)
 	{
-		num = num/ 10;
+		num = num / 10;
 	}
 	return (i);
 }
