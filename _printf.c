@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[i] == '%' && format[i + 1] == '\0')
 			{
-				break;
+				return (-1);
 			}
 			f = check_format_specifier(&format[i + 1]);
 			if (f != NULL)
