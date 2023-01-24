@@ -27,6 +27,10 @@ int _printf(const char *format, ...)
 		}
 		if (format[i] == '%')
 		{
+			if (format[i] == '%' && format[i + 1] == '\0')
+			{
+				break;
+			}
 			f = check_format_specifier(&format[i + 1]);
 			if (f != NULL)
 			{
@@ -34,11 +38,11 @@ int _printf(const char *format, ...)
 				count += value, i = i + 2;
 				continue;
 			}
-			/**if (f == NULL)
+			if (f == NULL)
 			{
 				_putchar(format[i]);
 				count++;
-			}*/
+			}
 			if (format[i + 1] == '\0')
 				break;
 			if (format[i + 1] != '\0')
