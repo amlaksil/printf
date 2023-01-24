@@ -1,8 +1,8 @@
 ## Custome printf
 It contains some of the basic features and functions found in the manual 3 of "printf".
-It produces output accrording to a format which is descrubed below. This function write its
-ouput to the studout, the standard output stream and returns the number of printed characters on success
-and -1 when the function fails.
+It produces output accrording to a format which is described below. This function write its
+ouput to the studout, the standard output stream and returns the number of printed characters
+on success and -1 when the function fails.
 The available format specifiers are:
 
 * %c: Prints a single character.
@@ -13,17 +13,22 @@ The available format specifiers are:
 * %u: Prints unsigned integers
 * %x: Prints the hexadecial representation of an unsigned decimal in lowercase letters
 * %X:Prints the hexadecial representation of an unsigned decimal in uppercase letters
-%r: Prints a reversed string
-%R: Prints the Rot13 interpretation of a string
+* %r: Prints a reversed string
+* %R: Prints the Rot13 interpretation of a string
 # Usage
 * All the files are to be compiled on Ubuntu 14.04 LTS
 * Compile your code with gcc -Wall -Werror -Wextra -pedantic
 * Include the "main.h" header file on your functions
-#Example
-'''gcc
-#inlude <main.h>
-#include <stdio.h>
+# Example
 
+```
+#include "main.h"
+#include <stdio.h>
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
 int main(void)
 {
 	int a, b;
@@ -41,9 +46,9 @@ int main(void)
 	printf("*****STRINGS*****\n");
 	printf("=====================\n");
 	char *str = "hello, world";
-	printf("Expected   : %s\n", "ALX"); /* Expected    ALX hello, world ALX*/
-        _printf("Actual     : %s\n", "holberton"); /* /* Actual    ALX hello, world ALX*/
+	printf("Expected: %s\n", "ALX"); /* Expected: ALX hello, world*/
+        _printf("Actual: %s\n", "ALX"); /* Actual: ALX hello, world*/
 
-        return (0);
+	return (0);
 }
-'''
+```
