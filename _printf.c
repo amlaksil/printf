@@ -21,7 +21,8 @@ int _printf(const char *format, ...)
 		{
 			value = _putchar(format[i]);
 			count += value, i++;
-			continue; }
+			continue;
+		}
 		if (format[i] == '%')
 		{
 			if (format[i] == '%' && format[i + 1] == '\0')
@@ -31,11 +32,10 @@ int _printf(const char *format, ...)
 			{
 				value = f(args);
 				count += value, i = i + 2;
-				continue; }
+				continue;
+			}
 			if (f == NULL)
-			{
-				_putchar(format[i]);
-				count++; }
+				_putchar(format[i]), count++;
 			if (format[i + 1] == '\0')
 				break;
 			if (format[i + 1] != '\0')
@@ -43,5 +43,8 @@ int _printf(const char *format, ...)
 				value = _putchar(format[i + 1]);
 				count += value, i = i + 2;
 				continue;
-			}}}
-	return (count); }
+			}
+		}
+	}
+	return (count);
+}
