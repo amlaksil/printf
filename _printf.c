@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _printf - writes the C string pointed by format to the standard output
  * @format: is a character string
@@ -7,7 +6,6 @@
  * Return: On success, the total number of characters written
  * If error occurs, a negative number is returned
  */
-
 int _printf(const char *format, ...)
 {
 	int i = 0, count = 0, value = 0;
@@ -23,26 +21,21 @@ int _printf(const char *format, ...)
 		{
 			value = _putchar(format[i]);
 			count += value, i++;
-			continue;
-		}
+			continue; }
 		if (format[i] == '%')
 		{
 			if (format[i] == '%' && format[i + 1] == '\0')
-			{
 				return (-1);
-			}
 			f = check_format_specifier(&format[i + 1]);
 			if (f != NULL)
 			{
 				value = f(args);
 				count += value, i = i + 2;
-				continue;
-			}
+				continue; }
 			if (f == NULL)
 			{
 				_putchar(format[i]);
-				count++;
-			}
+				count++; }
 			if (format[i + 1] == '\0')
 				break;
 			if (format[i + 1] != '\0')
@@ -50,8 +43,5 @@ int _printf(const char *format, ...)
 				value = _putchar(format[i + 1]);
 				count += value, i = i + 2;
 				continue;
-			}
-		}
-	}
-	return (count);
-}
+			}}}
+	return (count); }
