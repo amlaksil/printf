@@ -8,12 +8,13 @@
  */
 int print_str(va_list args)
 {
-	int i, count = 0, value = 0;
+	int i = 0, count = 0, value = 0;
 	char *str;
 
 	str = va_arg(args, char *);
 	if (str == NULL)
-		return (-1);
+		str = "(null)";
+
 	while (str[i])
 	{
 		value = _putchar(str[i]);
