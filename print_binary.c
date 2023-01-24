@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_bool - it prints unsigned integer in bool format
- * @n: the number to be printed as bool
+ * print_binary - it prints unsigned integer in bool format
+ * @args: the number to be printed as bool
  * Return: the length of the printed bool
  */
 int print_binary(va_list args)
@@ -11,7 +11,7 @@ int print_binary(va_list args)
 	int i, j;
 	char s[65];
 
-	n = va_arg(args,int);
+	n = va_arg(args, int);
 	num = n;
 	if (n == 0)
 	{
