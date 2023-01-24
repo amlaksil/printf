@@ -14,6 +14,7 @@ int (*check_format_specifier(const char *format))(va_list)
 			      {"%", print_percent},
 			      {"i", print_int},
 			      {"d", print_int},
+			      {"b", print_binary},
 			      {NULL, NULL}};
 
 	while (form_array[i].tmp != NULL)
