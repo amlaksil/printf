@@ -19,7 +19,7 @@ void print_i(int n)
 	_putchar((num % 10) + '0');
 	}
 /**
- * print_int - prints a number using putchar
+ * print_int - provides the number to be printed
  * @args: the number to be printed
  * Return: the length of the printed integer
  */
