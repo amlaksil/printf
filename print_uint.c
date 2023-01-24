@@ -21,7 +21,7 @@ void print_ui(unsigned int n)
 int print_uint(va_list args)
 {
 	unsigned long int num;
-	int n;
+	unsigned int n;
 	num = va_arg(args,long int);
 	if (num > 4294967296)
 	{
