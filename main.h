@@ -28,4 +28,5 @@ int print_binary(va_list);
 int print_uint(va_list);
 int print_octal(va_list);
 int print_hexadecimal(va_list);
+int print_str2(va_list);
 #endif
