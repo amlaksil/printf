@@ -1,10 +1,10 @@
 #include "main.h"
 /**
  * rot13 - it encodes the given string by using key = 13
- * @a: the address  of string to be encoded
+ * @a: the address of string to be encoded
  * Return: the encoded string
  */
-void rot13(char *a)
+char *rot13(char *a)
 {
 	int i;
 
@@ -19,6 +19,7 @@ void rot13(char *a)
 		a[i] = (((a[i] - 'A') + 13) % 26) + 'A';
 	}
 	}
+	return (a);
 }
 
 /**
@@ -35,7 +36,7 @@ int print_rot13str(va_list args)
 	str = va_arg(args, char *);
 	if (str == NULL)
 		str = "(null)";
-	rot13(str);
+	str = rot13(str);
 	while (str[count] != '\0')
 	{
 		_putchar(str[count]);
