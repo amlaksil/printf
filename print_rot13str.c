@@ -24,6 +24,8 @@ int print_rot13str(va_list args)
 	{
 		_putchar((((s[i] - 'A') + 13) % 26) + 'A');
 	}
+	if ((s[i] <= 'A' || s[i] >= 'Z') && (s[i] <= 'a' || s[i] >= 'z'))
+		_putchar(s[i]);
 	}
 	return (i);
 }
