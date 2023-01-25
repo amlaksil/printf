@@ -31,5 +31,6 @@ int print_rot13str(va_list args)
 	{
 		_putchar((((s[i] - 'A') + 13) % 26) + 'A');
 	}
+	}
 	return (i);
 }
