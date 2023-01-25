@@ -22,7 +22,7 @@ int (*check_format_specifier(const char *format))(va_list)
 			      {"S", print_str2},
 			      {"p", print_pointer},
 			      {"r", print_revstr},
-			      {"R", print_str},
+			      {"R", print_rot13str},
 			      {NULL, NULL}};
 
 	while (form_array[i].tmp != NULL)

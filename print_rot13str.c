@@ -12,7 +12,7 @@ int print_rot13str(va_list args)
 
 	s = va_arg(args, char *);
 	if (s == NULL)
-		s = "(nill)";
+		s = "(null)";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -24,11 +24,7 @@ int print_rot13str(va_list args)
 	{
 		s[i] = (((s[i] - 'A') + 13) % 26) + 'A';
 	}
-	}
-	while (s[count] != '\0')
-	{
-		_putchar(s[count]);
-		count++;
+	_putchar(s[i]);
 	}
 	return (count);
 }
