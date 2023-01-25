@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_hexadecimal - it prints given interger to octal
  * @args: the number to be converted and printed
@@ -8,7 +9,7 @@ int print_hexadecimal(va_list args)
 {
 	unsigned int num, n;
 	int i, j;
-	char a[16] = "0123456789abcdef";
+	char a[16] = "0123456789ABCDEF";
 	char str[9];
 
 	n = va_arg(args, int);
