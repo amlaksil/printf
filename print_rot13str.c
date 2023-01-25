@@ -14,7 +14,7 @@ int print_rot13str(va_list args)
 	if (s == NULL)
 	{
 		s = "(null)";
-		while(s[i] != '\0')
+		while (s[i] != '\0')
 		{
 			_putchar(s[i]);
 			i++;
