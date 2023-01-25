@@ -9,7 +9,7 @@ int print_hexadecimal(va_list args)
 {
 	unsigned int num, n;
 	int i, j;
-	char a[16] = "0123456789ABCDEF";
+	char a[16] = "0123456789abcdef";
 	char str[9];
 
 	n = va_arg(args, int);
@@ -37,6 +37,7 @@ int print_hexadecimal(va_list args)
  * @args: the number to be converted and printed
  * Return: the amount of character printed in side this function
  */
+
 int print_hexadecimal2(va_list args)
 {
 	unsigned int num, n;
