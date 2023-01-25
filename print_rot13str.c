@@ -26,11 +26,14 @@ int print_rot13str(va_list args)
 	if (s[i] >= 'a' && s[i] <= 'z')
 	{
 	_putchar((((s[i] - 'a') + 13) % 26) + 'a');
+		continue;
 	}
 	if (s[i] >= 'A' && s[i] <= 'Z')
 	{
 		_putchar((((s[i] - 'A') + 13) % 26) + 'A');
+		continue;
 	}
+	_putchar(s[i]);
 	}
 	return (i);
 }
