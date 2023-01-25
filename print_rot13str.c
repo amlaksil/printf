@@ -7,7 +7,7 @@
  */
 int print_rot13str(va_list args)
 {
-	int count = 0, i;
+	int i;
 	char *s;
 
 	s = va_arg(args, char *);
@@ -18,13 +18,12 @@ int print_rot13str(va_list args)
 	{
 	if (s[i] >= 'a' && s[i] <= 'z')
 	{
-	s[i] = (((s[i] - 'a') + 13) % 26) + 'a';
+	_putchar((((s[i] - 'a') + 13) % 26) + 'a');
 	}
 	if (s[i] >= 'A' && s[i] <= 'Z')
 	{
-		s[i] = (((s[i] - 'A') + 13) % 26) + 'A';
+		_putchar((((s[i] - 'A') + 13) % 26) + 'A');
 	}
-	_putchar(s[i]);
 	}
-	return (count);
+	return (i);
 }
