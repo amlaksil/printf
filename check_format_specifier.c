@@ -18,7 +18,7 @@ int (*check_format_specifier(const char *format))(va_list)
 			      {"u", print_uint},
 			      {"o", print_octal},
 			      {"x", print_hexadecimal},
-			      {"X", print_hexadecimal},
+			      {"X", print_hexadecimal2},
 			      {"S", print_str2},
 			      {"p", print_pointer},
 			      {"r", print_revstr},
