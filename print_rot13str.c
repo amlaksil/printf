@@ -9,7 +9,7 @@ int print_rot13str(va_list args)
 {
 	int count = 0, i;
 	char *s;
-	
+
 	s = va_arg(args, char *);
 	if (s == NULL)
 		s = "(nill)";
